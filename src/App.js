@@ -33,20 +33,28 @@ function App() {
                     value={city}
                     onKeyPress={getWeather}
                 />
+                <div className='w-[100%] h-[60%] border-[1px] border-black flex justify-center items-center'>
+                    {typeof data.main === 'undefined' ? (
+                        <div className='w-[70%] h-[60%] border-[1px] border-black'>
+                            <h1 className='text-center text-xl '>Try to find yours city ! </h1>
+                        </div>
+                    ) : (
+                        <div className='w-[90%] h-[90%] flex flex-row  border-[3px] border-blue-700 '>
 
-                {typeof data.main === 'undefined' ? (
-                    <div>
-                        <p>Try to search yours city ! </p>
-                    </div>
-                ) : (
-                    <div className=''>
-                        <p>{data.name}</p>
-                        <p>{Math.round(data.main.temp) - 273.15}°C</p>
-                        <p>{data.weather[0].main}</p>
-                    </div>
-                )}
+                            <div className='w-[50%] border-[3px] h-[100%] border-red-700'>
+                                <p>{data.name}</p>
+                            </div>    
 
-                {data.cod === '404' ? (<p>not found.</p>) : (<p></p>)}
+                            <div className='w-[50%] h-[100%] border-[3px]  border-green-700'>
+                                <p>{Math.round(data.main.temp- 273.15)}°C</p>
+                                <p>{data.weather[0].main}</p>
+                            </div>
+
+                        </div>
+                    )}
+
+                    {data.cod === '404' ? (<p>not found.</p>) : (<p></p>)}
+                </div>
 
             </div>
         </div>
