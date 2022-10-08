@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import axios from 'axios';
 import './App.css';
 
 function App() {
@@ -25,24 +24,24 @@ function App() {
 
     return (
         <div className="App flex justify-center items-center">
-            <div className="inputWrap flex justify-center items-center w-[60%] h-[800px] mt-[2%] border-[4px] border-black ">
+            <div className="inputWrap flex justify-start items-center flex-col w-[60%] h-[800px] mt-[2%] border-[4px] border-black  ">
+
                 <input
                     placeholder='City Here!'
-                    className=" w-[900px] h-[55px] m-0 mt-[] border-[1px] border-black"
+                    className=" w-[900px] h-[55px] m-0 mt-[10%] border-[1px] border-black"
                     onChange={event => setCity(event.target.value)}
                     value={city}
                     onKeyPress={getWeather}
                 />
 
-
                 {typeof data.main === 'undefined' ? (
                     <div>
-                        <p>Try to type yours city ! </p>
+                        <p>Try to search yours city ! </p>
                     </div>
                 ) : (
-                    <div>
+                    <div className=''>
                         <p>{data.name}</p>
-                        <p>{(data.main.temp)-273.15}°C</p>
+                        <p>{Math.round(data.main.temp) - 273.15}°C</p>
                         <p>{data.weather[0].main}</p>
                     </div>
                 )}
