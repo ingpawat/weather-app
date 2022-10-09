@@ -7,8 +7,7 @@ function App() {
     const [data, setData] = useState([{}]);
     const [city, setCity] = useState([]);
 
-
-
+    
     const getWeather = (event) => {
         if (event.key == "Enter") {
             fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api}`).then(
@@ -36,7 +35,9 @@ function App() {
                     onKeyPress={getWeather}
                     id='1'
                 />
+
                 <div className='findCityContainer w-[100%] h-[60%]  text-[#3f3f3f] flex justify-center items-center z-10'>
+
                     {typeof data.main === 'undefined' ? (
                         <div className='w-[70%] h-[60%] flex flex-col'>
 
@@ -46,7 +47,7 @@ function App() {
 
                             <div className='mt-10'>
                                 {data.cod === '404' ? (<p className='text-[#3f3f3f] text-center text-[30px] '>
-                                    Not found. The city isn't in or data. 😓
+                                    Not found. The city isn't in our data. 😓
                                 </p>) : (<p></p>)}
                             </div>
 
@@ -80,7 +81,6 @@ function App() {
                                         <p className='text-[20px]'>{data.weather[0].description}</p>
                                     </div>
                                     
-                                  
                                 </div>
 
                             </div>
