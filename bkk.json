@@ -1,0 +1,32 @@
+{
+    "status": "ok",
+    "totalResults": 2,
+    "articles": [
+        {
+            "source": {
+                "id": null,
+                "name": "Bangkok Post"
+            },
+            "author": "Supoj Wancharoen",
+            "title": "BMA pushes to rid city of amphetamine abuse",
+            "description": "The Bangkok Metropolitan Administration (BMA) is pushing to rid Bangkok of amphetamines following the child centre massacre in Nong Bua Lam Phu.",
+            "url": "https://www.bangkokpost.com/thailand/general/2410208/bma-pushes-to-rid-city-of-amphetamine-abuse",
+            "urlToImage": "https://static.bangkokpost.com/newdesign/assets/images/bg/thailand/images_thailand_1.jpg?v=0.1",
+            "publishedAt": "2022-10-09T00:22:00Z",
+            "content": "The Bangkok Metropolitan Administration (BMA) is pushing to rid Bangkok of amphetamines following the child centre massacre in Nong Bua Lam Phu.\r\nBankok governor Chadchart Sittipunt said the tragedy … [+817 chars]"
+        },
+        {
+            "source": {
+                "id": null,
+                "name": "Independent.ie"
+            },
+            "author": "James Corrigan",
+            "title": "‘The best of each against the other’ – Jon Rahm wants LIV Golf rebels in the Ryder Cup show",
+            "description": "Jon Rahm believes the Ryder Cup should feature the best players from the United States and Europe and that next year&rsquo;s match in Rome should not be made weaker by the LIV Golf rebels being excluded.",
+            "url": "https://www.independent.ie/sport/golf/the-best-of-each-against-the-other-jon-rahm-wants-liv-golf-rebels-in-the-ryder-cup-show-42051547.html",
+            "urlToImage": "https://www.independent.ie/sport/golf/a7074/42051546.ece/AUTOCROP/w1240h700/1431707274",
+            "publishedAt": "2022-10-09T01:30:00Z",
+            "content": "Jon Rahm believes the Ryder Cup should feature the best players from the United States and Europe and that next years match in Rome should not be made weaker by the LIV Golf rebels being excluded.Rah… [+2991 chars]"
+        }
+    ]
+}
