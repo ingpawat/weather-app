@@ -11,7 +11,7 @@ function App() {
 
 
     const getWeather = (event) => {
-        if (event.key == "Enter") {
+        if (event.key === "Enter") {
             fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api}`).then(
                 response => response.json()
             ).then(
@@ -23,10 +23,15 @@ function App() {
         }
     };
 
+    const handleClear = (e) => {
+        e.preventDefault()
+        setData('undefined')
+    }
+
     return (
         <div className="App flex justify-center items-center w-[100%] h-[900px] ">
 
-            <div className="absolute flex justify-center items-center flex-col w-[60%] h-[750px] rounded-[25px] bg-[#A3B6B2] ">
+            <div className="absolute flex justify-center items-center flex-col w-[60%] h-[850px] rounded-[25px] bg-[#A3B6B2] ">
                 <input
                     className=" w-[80%] h-[5.5rem] m-0 mt-[5%] z-10 bg-[#D9D9D9] 
                     // placeholder **
@@ -44,6 +49,8 @@ function App() {
 
 
                 <div className='Display-Content w-[100%] h-[70%] mt-[-10%]  text-[#3f3f3f] flex justify-center items-start z-0'>
+
+
 
                     {typeof data.main === 'undefined' ? (
 
@@ -63,17 +70,38 @@ function App() {
                     ) : (
                         <div className='w-[90%] h-[100%] flex flex-row z-0'>
 
+                            {/* The left part */}
                             <div className='TempCard w-[45%] h-[100%] flex justify-end'>
-                                <div className='w-[39%] h-[68%] bg-[#D9D9D9] z-10 absolute'></div>
-                                <div className='w-[95%] h-[95%] bg-[#818181] z-0 relative mt-[5%] mr-[5%]'/>
+                                <div className='w-[39%] h-[68%] bg-[#D9D9D9] z-10 absolute text-center flex flex-col justify-center items-center'>
+                                    <p className='text-[2rem] m-[4%]'>{data.name},{data.sys.country}</p>
+                                    <p className='text-[4rem]'>{Math.round(data.main.temp - 273.15)}°C</p>
+                                    <p className='text-[2rem]'>{data.weather[0].main}</p>
+                                </div>
+                                <div className='Shadow w-[95%] h-[95%] bg-[#818181] z-0 relative mt-[5%] mr-[5%]' />
                             </div>
 
+                            {/* The right part */}
                             <div className='FeelLikeCard w-[45%] h-[100%] ml-[2%]'>
-                                <div className='w-[39%] h-[68%] bg-[#D9D9D9] z-10 absolute ml-[1%]'></div>
-                                <div className='w-[95%] h-[95%] bg-[#818181] z-0 relative mt-[5%] mr-[5%]'/>
+                                <div className='w-[39%] h-[68%] bg-[#D9D9D9] z-10 absolute ml-[1%] text-center flex flex-col justify-center items-center'>
+                                    <p className='text-[2rem]'>FEELS LIKE</p>
+                                    <p className='text-[2rem]'>{Math.round(data.main.feels_like - 273.15)}°C</p>
+                                    <p className='UnderLine text-[1rem] m-[5%]'>----------------------</p>
+                                    <p className='text-[2rem]'>SKY</p>
+                                    <p className='text-[2rem]'>{data.weather[0].description}</p>
+                                </div>
+                                <div className='Shadow w-[95%] h-[95%] bg-[#818181] z-0 relative mt-[5%] mr-[5%]' />
                             </div>
 
-                                <img src={globe} alt='globe' className='w-[18%] z-0 absolute right-[-3%] bottom-[1%]'/>
+                            {/* Globe click to go to home page */}
+                            <div className='flex absolute bottom-[6%] right-[-2%] items-center justify-center w-[200px] h-[100px] cursor-pointer
+                            '
+                                onClick={(e) => handleClear(e)}
+                            >
+
+                                <img src={globe} alt='globe' className='w-[100%] z-0 relative' />
+                                <p className='z-10 text-[1rem] text-white tracking-widest absolute top-10'>CLEAR</p>
+
+                            </div>
 
 
 
@@ -91,7 +119,7 @@ function App() {
                                     <p className='text-[60px]'>{Math.round(data.main.temp - 273.15)}°C</p>
                                     <p className=''>{data.weather[0].main}</p>
                                 </div>
-
+                                ////////////
                                 <div className='cityDetail flex flex-col item-center justify-center text-center w-[50%] h-[100%] text-[25px]  '>
 
                                     <div className='mb-[10%] w-[90%] bg-blue-200 rounded-md hover:bg-white '>
