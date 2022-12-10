@@ -1,3 +1,5 @@
+<img src='https://res.cloudinary.com/dlyijmtfx/image/upload/v1670665750/weatherapp/eartj-slow-unscreen_ljfihb.gif'></img>
+
 I've created a simple app for viewing the weather. was created and designed by myself.
 
 receive the API from openweathermap.org using react library for UI components and style by tailwind.
@@ -19,3 +21,4 @@ And clear button when you just want to look at just spinning globe 😁<br/>
 <img src='https://res.cloudinary.com/dlyijmtfx/image/upload/v1670665261/weatherapp/clear_qcnj7z.jpg'></img>
 
 **************************************************************************************************
+
