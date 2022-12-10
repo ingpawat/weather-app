@@ -7,8 +7,8 @@ receive the API from openweathermap.org using react library for UI components an
 P.S. for now, just a desktop version. I would like to improve the design for desktop and for the mobile accessibility as well. 🔜
 
 **************************************************************************************************
-The Weather APP https://jocular-puppy-ec689f.netlify.app/
-Figma Design https://www.figma.com/file/01FOBW3zKANlMWoMluQ4Ap/Weather-App-major-change?node-id=5%3A13&t=PkQ0h58DVOxGC2Vk-0
+🌏 The Weather APP https://jocular-puppy-ec689f.netlify.app/ <br/>
+🎨 Figma Design https://www.figma.com/file/01FOBW3zKANlMWoMluQ4Ap/Weather-App-major-change?node-id=5%3A13&t=PkQ0h58DVOxGC2Vk-0
 
 **************************************************************************************************
 
