@@ -8,6 +8,7 @@ P.S. for now, just a desktop version. I would like to improve the design for des
 
 **************************************************************************************************
 The Weather APP https://jocular-puppy-ec689f.netlify.app/
+Figma Design https://www.figma.com/file/01FOBW3zKANlMWoMluQ4Ap/Weather-App-major-change?node-id=5%3A13&t=PkQ0h58DVOxGC2Vk-0
 
 **************************************************************************************************
 
