@@ -29,7 +29,7 @@ function App() {
     }
 
     return (
-        <div className="App flex justify-center items-center w-[100%] h-[900px] ">
+        <div className="App flex justify-center items-center w-[100%] h-[990px] bg-[#363636] ">
 
             <div className="absolute flex justify-center items-center flex-col w-[60%] h-[850px] rounded-[25px] bg-[#A3B6B2] ">
                 <input
