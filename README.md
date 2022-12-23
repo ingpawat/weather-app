@@ -1,10 +1,6 @@
 <img src='https://res.cloudinary.com/dlyijmtfx/image/upload/v1670665750/weatherapp/eartj-slow-unscreen_ljfihb.gif'></img>
 
-I've created a simple app for viewing the weather. was created and designed by myself.
-
-receive the API from openweathermap.org using react library for UI components and style by tailwind.
-
-P.S. for now, just a desktop version. I would like to improve the design for desktop and for the mobile accessibility as well. 🔜
+I created a simple weather app that I designed and developed myself using the React library for UI components and the TailwindCSS styling framework. I received the API from openweathermap.org. The app is currently only available in a desktop version, but I plan to improve the design for both desktop and mobile accessibility in the future.
 
 **************************************************************************************************
 🌏 The Weather APP https://jocular-puppy-ec689f.netlify.app/ <br/>
